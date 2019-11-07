@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">demo</string>
+    <string name="moudle1">常用控件</string>
+    <string name="moudle2">四大组件</string>
+</resources>

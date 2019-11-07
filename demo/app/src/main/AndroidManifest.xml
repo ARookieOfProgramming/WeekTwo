@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zhouzhou.demo">
+
+    <permission android:name="com.zhouzhou.demo.task" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="com.zhouzhou.demo.task" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.Light.NoTitleBar">
+        <activity android:name=".task.MenuActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".task.activity.FirstActivity" />
+        <activity android:name=".task.activity.SecondActivity" />
+        <activity android:name=".task.broadcastReceiver.LocalBroadcastActivity" />
+        <activity android:name=".task.activity.ThirdActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_ACTIVITY" />
+
+                <category android:name="com.zhouzhou.demo.activity.MY_CATEGORY" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".task.broadcastReceiver.BroadcastActivity" />
+        <activity android:name=".task.service.ServiceMenuActivity" />
+        <activity android:name=".task.service.SerivceLocalActivity" />
+
+        <receiver
+            android:name=".task.broadcastReceiver.StaticReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="888">
+                <action android:name="BROADCAST_ACTION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:priority="199">
+                <action android:name="BROADCAST_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".task.service.LocalService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".task.service.ReceptionService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".task.service.ServiceReceptionActivity" />
+
+        <service
+            android:name=".task.service.NetworkService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".task.service.ServiceNetworkActivity" />
+    </application>
+
+</manifest>

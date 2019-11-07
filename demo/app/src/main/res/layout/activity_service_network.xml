@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_third">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+        >
+
+        <Button
+            android:id="@+id/btn_service_network_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:text="启动服务"
+            android:textSize="18sp"
+            />
+
+        <Button
+            android:id="@+id/btn_service_network_stop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:text="关闭服务"
+            android:textSize="18sp"
+            />
+
+        <Button
+            android:id="@+id/btn_service_network_bind"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:text="绑定服务"
+            android:textSize="18sp"
+            />
+
+        <Button
+            android:id="@+id/btn_service_network_unbind"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:text="解绑服务"
+            android:textSize="18sp"
+            />
+    </LinearLayout>
+</LinearLayout>

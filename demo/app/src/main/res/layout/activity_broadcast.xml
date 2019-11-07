@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_second">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:orientation="vertical"
+        >
+        <Button
+            android:id="@+id/btn_broadcast_send_one"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:text="标准广播"
+            />
+
+        <Button
+            android:id="@+id/btn_broadcast_send_two"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:text="有序广播"
+            />
+        <Button
+            android:id="@+id/btn_broadcast_send_three"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:text="本地广播"
+            />
+        <Button
+            android:id="@+id/btn_broadcast_send_four"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:text="接收系统广播"
+            />
+    </LinearLayout>
+
+</LinearLayout>
