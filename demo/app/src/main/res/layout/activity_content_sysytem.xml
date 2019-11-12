@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_third"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+
+        <ListView
+            android:id="@+id/lv_content_show"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:dividerHeight="1dp"
+            android:divider="@color/colorPrimaryDark"/>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_content_system_get"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="100dp"
+        android:text="获取联系人列表"
+        android:textSize="18sp" />
+
+</LinearLayout>

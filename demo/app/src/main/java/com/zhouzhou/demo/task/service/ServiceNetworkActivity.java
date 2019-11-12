@@ -16,6 +16,10 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+/**
+ * //可通信服务
+ * //步骤1：在新建子类继承Service类，并新建一个子类继承自Binder类、写入与Activity关联需要的方法、创建实例
+ */
 public class ServiceNetworkActivity extends Activity {
 
     @BindView(R.id.btn_service_network_start)
@@ -74,7 +78,6 @@ public class ServiceNetworkActivity extends Activity {
                 }catch (Exception e){
                     Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
-
                 break;
         }
     }

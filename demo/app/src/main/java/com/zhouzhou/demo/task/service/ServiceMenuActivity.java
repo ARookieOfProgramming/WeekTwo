@@ -40,7 +40,8 @@ public class ServiceMenuActivity extends Activity {
 
     @OnClick(R.id.btn_service_remote)
     public void onBtnServiceRemoteClicked() {
-
+        mIntent = new Intent(this,ServiceRemoteActivity.class);
+        startActivity(mIntent);
     }
 
     @OnClick(R.id.btn_service_network)
@@ -51,5 +52,7 @@ public class ServiceMenuActivity extends Activity {
 
     @OnClick(R.id.btn_service_reception)
     public void onBtnServiceReceptionClicked() {
+        mIntent = new Intent(this,ServiceReceptionActivity.class);
+        startActivity(mIntent);
     }
 }

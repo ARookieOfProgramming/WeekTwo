@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/background_third"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_content_custom_show_data"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="20dp"
+        android:hint="查询结果："
+        android:gravity="center_vertical"
+        android:textAlignment="gravity"
+        android:background="@color/menu_color" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FF564F51" />
+
+    <EditText
+        android:id="@+id/et_content_custom_id"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/menu_color"
+        android:gravity="center_vertical"
+        android:hint="id:"
+        android:focusable="auto"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FF564F51" />
+
+    <EditText
+        android:id="@+id/et_content_custom_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/menu_color"
+        android:gravity="center_vertical"
+        android:hint="name:"
+        android:focusable="auto"
+        />
+
+    <Button
+        android:id="@+id/et_content_custom_insert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:text="插入数据"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/et_content_custom_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:text="删除数据"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/et_content_custom_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:text="更新数据"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/et_content_custom_query"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:text="查询数据"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+</LinearLayout>

@@ -1,4 +1,4 @@
-package com.zhouzhou.demo.task;
+package com.zhouzhou.demo.task.activity;
 
 import android.app.Activity;
 import android.content.Context;
@@ -8,21 +8,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import com.zhouzhou.demo.R;
-import com.zhouzhou.demo.task.activity.FirstActivity;
 import com.zhouzhou.demo.task.broadcastReceiver.BroadcastActivity;
 import com.zhouzhou.demo.task.contentProvider.ContentMenuActivity;
 import com.zhouzhou.demo.task.service.ServiceMenuActivity;
-
-//import java.time.LocalTime;
-
-//import java.time.LocalTime;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MenuActivity extends Activity {
+public class ActivityMenu extends Activity {
 
     @BindView(R.id.tv_menu_hi)
     TextView tvMenuHi;
@@ -42,14 +38,14 @@ public class MenuActivity extends Activity {
     Button btnMenuBroadcast;
     @BindView(R.id.btn_menu_component)
     Button btnMenuComponent;
-    private Context mContext = MenuActivity.this;
+    private Context mContext = ActivityMenu.this;
 
     private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu);
+        setContentView(R.layout.activity_activity_menu);
         ButterKnife.bind(this);
         //initHelloWords();
     }
@@ -74,7 +70,7 @@ public class MenuActivity extends Activity {
         switch (view.getId()) {
 
             case R.id.btn_menu_activity:
-                intent = new Intent(mContext, FirstActivity.class);
+                intent = new Intent(mContext, ActivityFirst.class);
                 startActivity(intent);
                 break;
             case R.id.btn_menu_service:

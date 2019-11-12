@@ -2,12 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.zhouzhou.demo">
 
-    <permission android:name="com.zhouzhou.demo.task" />
-
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
-    <uses-permission android:name="com.zhouzhou.demo.task" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
@@ -17,17 +15,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@android:style/Theme.Light.NoTitleBar">
-        <activity android:name=".task.MenuActivity">
+        <activity android:name=".task.activity.ActivityMenu">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".task.activity.FirstActivity" />
-        <activity android:name=".task.activity.SecondActivity" />
+        <activity android:name=".task.activity.ActivityFirst" />
+        <activity android:name=".task.activity.ActivitySecond" />
         <activity android:name=".task.broadcastReceiver.LocalBroadcastActivity" />
-        <activity android:name=".task.activity.ThirdActivity">
+        <activity android:name=".task.activity.ActivityThird">
             <intent-filter>
                 <action android:name="android.intent.action.MY_ACTIVITY" />
 
@@ -44,14 +42,20 @@
             android:exported="true">
             <intent-filter android:priority="888">
                 <action android:name="BROADCAST_ACTION" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-            <intent-filter android:priority="199">
-                <action android:name="BROADCAST_ACTION" />
-            </intent-filter>
         </receiver>
+        <receiver
+            android:name=".task.broadcastReceiver.MyReceiver"
+            android:enabled="true"
+            android:exported="true"
+            >
+            <intent-filter android:priority="456">
+                <action android:name="BROADCAST_ACTION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
 
+        </receiver>
         <service
             android:name=".task.service.LocalService"
             android:enabled="true"
@@ -68,7 +72,21 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".task.service.ServiceNetworkActivity" />
+        <activity
+            android:name=".task.service.ServiceNetworkActivity"
+            android:launchMode="singleTop" />
+        <activity android:name=".task.service.ServiceRemoteActivity" />
+        <activity android:name=".task.contentProvider.ContentSystemActivity" />
+        <activity android:name=".task.contentProvider.ContentMenuActivity" />
+        <activity android:name=".task.contentProvider.ContentCustomActivity" />
+
+        <provider
+            android:name=".task.contentProvider.MyContentProvider"
+            android:authorities="com.zhouzhou.demo.task.provider"
+            android:enabled="true"
+            android:exported="true"></provider>
+
+
     </application>
 
 </manifest>
